@@ -55,4 +55,3 @@ def roc_plot(source, y_true="y", y_pred="y_pred", partition_col=None, chart_args
             .encode(x="False Positive Rate", y="True Positive Rate")
             .properties(title=f"auROC: {test_auc}")
         )
-

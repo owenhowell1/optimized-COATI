@@ -1,9 +1,10 @@
 """
-A simplified version of e3gnn 
+A simplified version of e3gnn
 because CLIP is complex enough :O
 No decoder, no coordinates
-Just dumps the hidden rep. 
+Just dumps the hidden rep.
 """
+
 import torch
 import torch.nn as nn
 
@@ -29,6 +30,7 @@ class e3gnn_clip(torch.nn.Module):
         """
         The Welling research code is quadratic in batch size.
         and has no instancenorm. This fixes that.
+
         This also has no edge feature b/c bonds aren't real
 
         h_l => n_graph X n_node X n_hidden_features

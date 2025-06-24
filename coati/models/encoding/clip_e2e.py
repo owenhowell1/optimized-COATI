@@ -720,12 +720,12 @@ class e3gnn_smiles_clip_e2e(nn.Module):
         mask_val = -1  # to mask loss for special tokens
         next_tokens = torch.zeros_like(tokens)
         next_tokens[:, : (tokens.shape[1] - 1)] = tokens[:, 1:].clone()
-        next_tokens[
-            :, :4
-        ] = mask_val  # '[UNK][SMILES][SUFFIX][MIDDLE]', [CLIP] not present because it was first in tokens
-        next_tokens[
-            :, -1
-        ] = mask_val  # because of the shift and next_tokens construction, next_tokens[:, -1] is [0, 0, ...], ensure this is pad token
+        next_tokens[:, :4] = (
+            mask_val  # '[UNK][SMILES][SUFFIX][MIDDLE]', [CLIP] not present because it was first in tokens
+        )
+        next_tokens[:, -1] = (
+            mask_val  # because of the shift and next_tokens construction, next_tokens[:, -1] is [0, 0, ...], ensure this is pad token
+        )
         next_tokens[next_tokens == tokenizer.pad_token] = mask_val
 
         # find ar_loss per SMILES

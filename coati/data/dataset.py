@@ -1,8 +1,9 @@
 """
 loads data used for training COATI.
 
-c.f. make_cache. which does a lot of aggs. 
+c.f. make_cache. which does a lot of aggs.
 """
+
 import os
 
 from torch.utils.data.datapipes.iter import FileLister, Shuffler

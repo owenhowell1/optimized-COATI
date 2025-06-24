@@ -1,6 +1,7 @@
 """
-This version only passes nonzero messages. 
+This version only passes nonzero messages.
 """
+
 from typing import Callable, Tuple
 
 import torch

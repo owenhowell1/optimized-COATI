@@ -13,7 +13,6 @@ from coati.models.encoding.tokenizers import get_vocab
 from coati.models.encoding.tokenizers.trie_tokenizer import TrieTokenizer
 
 
-
 class CPU_Unpickler(pickle.Unpickler):
     def find_class(self, module, name):
         if module == "torch.storage" and name == "_load_from_bytes":

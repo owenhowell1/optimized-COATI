@@ -1,5 +1,5 @@
 """
-Causal and non-causal transformer blocks. 
+Causal and non-causal transformer blocks.
 """
 
 import math
