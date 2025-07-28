@@ -1,0 +1,26 @@
+name: coati
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cpuonly
+  - rdkit
+  - pandas
+  - numpy
+  - matplotlib
+  - scipy
+  - scikit-learn
+  - jupyter
+  - seaborn
+  - altair
+  - boto3
+  - tqdm
+  - pip
+  - pip:
+    - requests
+    - due @ git+https://github.com/y0ast/DUE.git 
